@@ -17,6 +17,5 @@ public class onetwo {
                 System.out.println("[" + i + "," + (i + 1) + "]");
             }
         }
-
     }
 }
