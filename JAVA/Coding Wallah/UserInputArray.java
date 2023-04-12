@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class UserInputArray {
     public static void main(String[] args) {
         //static array is an array jisme compile time se pehle he size daaldehnge ham.//size fixed
