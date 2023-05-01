@@ -11,5 +11,6 @@ public class Fruits {
         f1.name = "Orange";
         System.out.println(f.name+" "+f.price);
         System.out.println(f1.name+" "+f1.price);
+    
     }
 }
