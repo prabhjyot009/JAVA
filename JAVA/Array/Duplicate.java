@@ -41,6 +41,7 @@ public class Duplicate {
             }
         }
         System.out.println(Arrays.toString(duplicate));
+        
     }
 }
 

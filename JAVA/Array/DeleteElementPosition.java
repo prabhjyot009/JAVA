@@ -1,27 +1,67 @@
-import java.util.Scanner;
+// Java program to remove an element
+// from a specific index from an array
 
-public class DeleteElementPosition {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the size of array:");
-        int size=sc.nextInt();
-        int[] arr=new int[size];
-        System.out.println("Enter the elements of array:");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i]=sc.nextInt();
-        }
-        System.out.println("Enter the position of element to delete:");
-        int position=sc.nextInt();
-        delete(arr,position);
+import java.util.Arrays;
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
-    }
-    static void delete(int[] arr,int position){
-        for (int i = position-1; i < arr.length-1; i++) {
-            arr[i]=arr[i+1];
-        }
-        arr[arr.length-1]=0;
-    }
+class DeleteElementPosition {
+
+	// Function to remove the element
+	public static int[] removeTheElement(int[] arr, int index)
+	{
+
+		// If the array is empty
+		// or the index is not in array range
+		// return the original array
+		if (arr == null || index < 0
+			|| index >= arr.length) {
+
+			return arr;
+		}
+
+		// Create another array of size one less
+		int[] anotherArray = new int[arr.length - 1];
+
+		// Copy the elements except the index
+		// from original array to the other array
+		for (int i = 0, k = 0; i < arr.length; i++) {
+
+			// if the index is
+			// the removal element index
+			if (i == index) {
+				continue;
+			}
+
+			// if the index is not
+			// the removal element index
+			anotherArray[k++] = arr[i];
+		}
+
+		// return the resultant array
+		return anotherArray;
+	}
+
+	// Driver Code
+	public static void main(String[] args)
+	{
+
+		// Get the array
+		int[] arr = { 1, 2, 3, 4, 5 };
+
+		// Print the resultant array
+		System.out.println("Original Array: "
+						+ Arrays.toString(arr));
+
+		// Get the specific index
+		int index = 2;
+
+		// Print the index
+		System.out.println("Index to be removed: " + index);
+
+		// Remove the element
+		arr = removeTheElement(arr, index);
+
+		// Print the resultant array
+		System.out.println("Resultant Array: "
+						+ Arrays.toString(arr));
+	}
 }
