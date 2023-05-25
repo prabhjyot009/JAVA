@@ -1,3 +1,4 @@
+    public class DutchRelationalLeetcode {
     public static void main(String[] args) {
         int[] arr={0,0,1,1,2,0};
         int low=0;  //low pointer
@@ -20,8 +21,8 @@
                 int temp=arr[mid];
         
                 arr[mid]=arr[high];
-                arr[high]=temp;
-                high--;
+                arr[high]=temp;//
+                high--; //decrement high pointer only when mid is 2 because we want to keep 2 at the end of the array
             }
         }    
         for(int i=0;i<arr.length;i++){ //print the array
