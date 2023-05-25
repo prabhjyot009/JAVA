@@ -8,7 +8,6 @@
             if(arr[mid]==0){ //if mid is 0, swap low and mid, increment low and mid
                 int temp=arr[low];
                 arr[low]=arr[mid];
-
                 arr[mid]=temp;
                 low++;
                 mid++;
