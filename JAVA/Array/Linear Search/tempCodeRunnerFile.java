@@ -1,4 +1,4 @@
-public class Q1 {
+// public class Q1 {
 //     public static void main(String[] args) {
 //         int[] arr={1,3,19,14,26};
 //         int target=19;

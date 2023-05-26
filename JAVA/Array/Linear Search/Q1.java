@@ -28,7 +28,9 @@
 //worst case time complexity of an linear
 //search is O(n) and best:O(1){constant}
 
+import java.util.Arrays;
 
+import javax.swing.text.html.parser.Element;
 
 /**
  * Q1
@@ -37,7 +39,7 @@ public class Q1 {
 
     public static void main(String[] args) {
         int[] arr={1,2,3,4,5};
-        int target=1;
+        int target=4;
         int result=linearSearch(arr,target);
         System.out.println(result);
 
@@ -46,12 +48,18 @@ public class Q1 {
         if(arr.length==0){
             return -1;
         }
-        for(int index=0;index<arr.length;index++){
-            int element=arr[index];
+        // for(int index=0;index<arr.length;index++){
+        //     int element=arr[index];
+        //     if(element==target){
+        //         return index;
+        //     }
+        // }
+        for(int element:arr){
             if(element==target){
-                return index;
+                return element;
             }
         }
+        System.out.println(Arrays.toString());
         return -1;
     }
 }
