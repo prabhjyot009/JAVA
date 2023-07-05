@@ -25,7 +25,7 @@ public class Arrlist {
         //using multi dimensional array:
 
         Scanner in=new Scanner(System.in);
-        ArrayList<ArrayList<Integer>> list=new ArrayList<>();
+        ArrayList<ArrayList<Integer>> list2=new ArrayList<>();
         for(int i=0;i<3;i++){
             list.add(new ArrayList<>());
         }
